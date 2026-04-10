@@ -7,13 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-    <script>
-        // Bakım modu aktif ise maintenance.html'e yönlendir
-        const maintenanceMode = true; // false yaparak kapat
-        if (maintenanceMode) {
-            window.location.href = '/maintenance.html';
-        }
-    </script>
+
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
@@ -51,18 +45,19 @@
     <!-- Navbar Start -->
     <div class="container-fluid sticky-top">
         <div class="container">
-          <nav class="navbar navbar-expand-lg navbar-light border-bottom border-2 border-white py-0"> 
-            <div class="container-fluid p-0"> <a href="index.html" class="navbar-brand d-flex align-items-center m-0 p-0" style="line-height: 0;">
-                    <img class="img-fluid" src="img/hanbau.png" alt="HANBAU Logo" 
-                         style="height: 100px; width: auto; margin-top: -5px; margin-bottom: -5px;">
-                    
+            <nav class="navbar navbar-expand-lg navbar-light border-bottom border-2 border-white py-0">
+                <div class="container-fluid p-0"> <a href="index.html"
+                        class="navbar-brand d-flex align-items-center m-0 p-0" style="line-height: 0;">
+                        <img class="img-fluid" src="img/hanbau.png" alt="HANBAU Logo"
+                            style="height: 100px; width: auto; margin-top: -5px; margin-bottom: -5px;">
 
-                </a>
-                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"> </span>
-                </button>
-                <!-- 
+
+                    </a>
+                    <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"> </span>
+                    </button>
+                    <!-- 
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
                         <a href="index.html" class="nav-item nav-link active">Starseite</a>
@@ -85,15 +80,25 @@
         </div>
     </div>
     <!-- Navbar End -->
-
+    <!-- Brand Bar Start -->
+    <div class="container-fluid bg-light py-2">
+        <div class="container">
+            <div class="d-flex justify-content-end">
+                <a class="btn btn-primary btn-sm px-3 me-2" href="pdf/seramiksan.pdf" target="_blank">Seramiksan</a>
+                <a class="btn btn-primary btn-sm px-3" href="pdf/turco.pdf" target="_blank">Turco</a>
+            </div>
+        </div>
+    </div>
+    <!-- Brand Bar End -->
 
     <!-- Hero Start -->
     <div class="container-fluid pb-5 hero-header bg-light mb-5">
         <div class="container py-5">
             <div class="row g-5 align-items-center mb-5">
                 <div class="col-lg-6">
-                    <h3 class="display-1 mb-4 animated slideInRight">Willkommen bei <span class="text-primary">HANBAU</span>
-                        </h3>
+                    <h3 class="display-1 mb-4 animated slideInRight">Willkommen bei <span
+                            class="text-primary">HANBAU</span>
+                    </h3>
                     <h5 class="d-inline-block border border-3 border-white py-3 px-5 mb-0 animated slideInRight">
                         Renovierung, Design & Import aus einer Hand in München. </h5>
                 </div>
@@ -162,8 +167,11 @@
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <h1 class="mb-5">Ihre Experten für Renovierung & Design in <span class="text-uppercase text-primary bg-light px-2">München</span></h1>
-                    <p class="mb-4">Von der fotorealistischen 3D-Visualisierung bis zur schlüsselfertigen Übergabe Ihres Projekts – wir realisieren Wohnträume und Gewerbeflächen auf höchstem Niveau. Mit unserem Eigenimport an erstklassigen Fliesen und Bauchemie garantieren wir Qualität aus einer Hand.</p>
+                    <h1 class="mb-5">Ihre Experten für Renovierung & Design in <span
+                            class="text-uppercase text-primary bg-light px-2">München</span></h1>
+                    <p class="mb-4">Von der fotorealistischen 3D-Visualisierung bis zur schlüsselfertigen Übergabe Ihres
+                        Projekts – wir realisieren Wohnträume und Gewerbeflächen auf höchstem Niveau. Mit unserem
+                        Eigenimport an erstklassigen Fliesen und Bauchemie garantieren wir Qualität aus einer Hand.</p>
                     <div class="row g-3">
                         <div class="col-sm-4">
                             <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Planen</h6>
@@ -216,8 +224,8 @@
                     <h4>Preis-Leistungs-Vortei</h4>
                     <p class="mb-0">Erstklassige Konditionen durch Direktimport von Fliesen und Baustoffen.</p>
                 </div>
-                
-               
+
+
             </div>
         </div>
     </div>
@@ -232,12 +240,15 @@
                     <div class="d-flex flex-column justify-content-center bg-primary h-100 p-5">
                         <h2 class="text-white mb-5">Unsere <span
                                 class="text-uppercase text-primary bg-light px-2">Produktkataloge</span></h2>
-                        <h5 class="text-white mb-0">Entdecken Sie unsere neuesten Keramik-Kollektionen und Hochleistungs-Bauchemie direkt aus eigenem Import. Jetzt Kataloge herunterladen</h5>
-                         <p></p>
-                         <p></p>
-                        <div><a class="btn bg-light text-primary  px-4 me-2" href="#!">Seramiksan</a>
-                        <a class="btn  bg-light text-primary  px-4 me-2" href="#!">Turco</a></div>
-                        
+                        <h5 class="text-white mb-0">Entdecken Sie unsere neuesten Fliesen-Kollektionen und
+                            Hochleistungs-Bauchemie direkt aus eigenem Import. Jetzt Kataloge herunterladen</h5>
+                        <p></p>
+                        <p></p>
+                        <div>
+                            <a class="btn bg-light text-primary  px-4 me-2" href="pdf/seramiksan.pdf" target="_blank">Seramiksan</a>
+                            <a class="btn  bg-light text-primary  px-4 me-2" href="pdf/turco.pdf" target="_blank">Turco</a>
+                        </div>
+
                     </div>
                 </div>
                 <div class="col-lg-7">
@@ -311,8 +322,12 @@
                 <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
                     <h1 class="mb-5">Unsere kreativen <span
                             class="text-uppercase text-primary bg-light px-2">Dienstleistungen</span></h1>
-                    <p>Wir übernehmen die gesamte Abwicklung von Design, Projektierung, Bau/Renovierung und Ausführung in München und Umgebung aus einer Hand.</p>
-                    <p class="mb-5"> Wir klären den Umfang vor Ort und erstellen ein schriftliches Angebot auf Basis von Aufmaßen und Leistungspositionen.Darüber hinaus integrieren wir die Beschaffung von Bauchemikalien und Keramik in denselben Plan und koordinieren so den gesamten Ablauf von Beschaffung bis Ausführung.</p>
+                    <p>Wir übernehmen die gesamte Abwicklung von Design, Projektierung, Bau/Renovierung und Ausführung
+                        in München und Umgebung aus einer Hand.</p>
+                    <p class="mb-5"> Wir klären den Umfang vor Ort und erstellen ein schriftliches Angebot auf Basis von
+                        Aufmaßen und Leistungspositionen.Darüber hinaus integrieren wir die Beschaffung von
+                        Bauchemikalien und Fliesen in denselben Plan und koordinieren so den gesamten Ablauf von
+                        Beschaffung bis Ausführung.</p>
                     <div class="d-flex align-items-center bg-light">
                         <div class="btn-square flex-shrink-0 bg-primary" style="width: 100px; height: 100px;">
                             <i class="fa fa-phone fa-2x text-white"></i>
@@ -331,7 +346,8 @@
                                     <img class="img-fluid w-100" src="img/service-1.jpg" alt="">
                                     <h3>Renovierung</h3>
                                 </a>
-                                <p class="mb-0">Professionelle Komplettsanierung für Wohn- und Gewerbeeinheiten in München – funktional, modern und termingerecht.</p>
+                                <p class="mb-0">Professionelle Komplettsanierung für Wohn- und Gewerbeeinheiten in
+                                    München – funktional, modern und termingerecht.</p>
                             </div>
                         </div>
                         <div class="col-md-6 wow fadeIn" data-wow-delay="0.4s">
@@ -340,7 +356,8 @@
                                     <img class="img-fluid w-100" src="img/service-2.jpg" alt="">
                                     <h3>3D Visualisierung & Rendering</h3>
                                 </a>
-                                <p class="mb-0">Sehen Sie das Ergebnis, bevor der erste Stein gelegt wird. Erstklassige 3D-Visualisierungen für maximale Planungssicherheit.</p>
+                                <p class="mb-0">Sehen Sie das Ergebnis, bevor der erste Stein gelegt wird. Erstklassige
+                                    3D-Visualisierungen für maximale Planungssicherheit.</p>
                             </div>
                         </div>
                         <div class="col-md-6 wow fadeIn" data-wow-delay="0.6s">
@@ -349,7 +366,8 @@
                                     <img class="img-fluid w-100" src="img/service-3.jpg" alt="">
                                     <h3>Schlüsselfertiges Bauen</h3>
                                 </a>
-                                <p class="mb-0">Von der ersten Skizze bis zur Schlüsselübergabe – wir übernehmen das gesamte Projektmanagement für Sie.</p>
+                                <p class="mb-0">Von der ersten Skizze bis zur Schlüsselübergabe – wir übernehmen das
+                                    gesamte Projektmanagement für Sie.</p>
                             </div>
                         </div>
                         <div class="col-md-6 wow fadeIn" data-wow-delay="0.8s">
@@ -358,7 +376,8 @@
                                     <img class="img-fluid w-100" src="img/service-4.jpg" alt="">
                                     <h3>Import & Baustoffe</h3>
                                 </a>
-                                <p class="mb-0">Exklusive Fliesen und hochwertige Bauchemie aus eigenem Import – für langlebige Ästhetik und höchste Beständigkeit.</p>
+                                <p class="mb-0">Exklusive Fliesen und hochwertige Bauchemie aus eigenem Import – für
+                                    langlebige Ästhetik und höchste Beständigkeit.</p>
                             </div>
                         </div>
                     </div>
@@ -370,6 +389,7 @@
 
 
     <!-- Team Start -->
+    <!-- 
     <div class="container-fluid bg-light py-5">
         <div class="container py-5">
             <h1 class="mb-5">Our Professional <span class="text-uppercase text-primary bg-light px-2">Designers</span>
@@ -470,10 +490,12 @@
             </div>
         </div>
     </div>
+    -->
     <!-- Team End -->
 
 
     <!-- Testimonial Start -->
+    <!-- 
     <div class="container-xxl py-5">
         <div class="container py-5">
             <div class="row justify-content-center">
@@ -541,10 +563,11 @@
             </div>
         </div>
     </div>
+     -->
     <!-- Testimonial End -->
 
 
-        <!-- Footer Start -->
+    <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 footer pt-5">
         <div class="container py-5">
             <div class="row g-5">
@@ -555,7 +578,7 @@
                     <p class="mb-0"></p>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                    <h5 class="text-white mb-4">Get In Touch</h5>
+                    <h5 class="text-white mb-4">Kontakt</h5>
                     <p><i class="fa fa-map-marker-alt me-3"></i>Cumhuriyet Nachbarschaft</p>
                     <p><i class="fa fa-phone-alt me-3"></i>+49 172 8122543</p>
                     <p><i class="fa fa-phone-alt me-3"></i>+90 542 5672874</p>
@@ -596,13 +619,13 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" >hanbaudesign@com</a>, All Right Reserved.
+                        &copy; <a class="border-bottom">info@hanbaudesign.com</a>, All Right Reserved.
 
                         <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
                         <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
                         <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="border-bottom" href="https:/hanbaudesign.com/">Hanbau</a>. Distributed by
-                        <a class="border-bottom" href="https:/hanbaudesign.com/" target="_blank">Hanbau</a>
+                        Designed By <a class="border-bottom" href="">Hanbau</a>. Distributed by
+                        <a class="border-bottom" href="" target="_blank">Hanbau</a>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
