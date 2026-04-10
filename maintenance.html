@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>HANBAU Project - Wartungsarbeiten</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Space+Grotesk&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .maintenance-container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(
+          135deg,
+          #e6f0ef 0%,
+          #d4e8e5 50%,
+          #c2dfe0 100%
+        );
+        position: relative;
+        overflow: hidden;
+      }
+
+      .maintenance-content {
+        text-align: center;
+        color: #1b5e20;
+        z-index: 2;
+        padding: 20px;
+      }
+
+      .maintenance-logo {
+        margin-bottom: 40px;
+        animation: fadeInDown 0.8s ease-out;
+      }
+
+      .maintenance-logo img {
+        height: 100px;
+        width: auto;
+      }
+
+      .maintenance-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        animation: fadeInUp 0.8s ease-out 0.2s both;
+        color: #0d6b68;
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      .maintenance-subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 50px;
+        opacity: 0.85;
+        animation: fadeInUp 0.8s ease-out 0.4s both;
+        color: #0d6b68;
+      }
+
+      .countdown-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 20px;
+        max-width: 500px;
+        margin: 0 auto 50px;
+        animation: fadeInUp 0.8s ease-out 0.6s both;
+      }
+
+      .countdown-item {
+        background: rgba(255, 255, 255, 0.4);
+        border: 2px solid rgba(27, 94, 32, 0.3);
+        border-radius: 10px;
+        padding: 20px;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+      }
+
+      .countdown-item:hover {
+        background: rgba(255, 255, 255, 0.6);
+        border-color: var(--bs-primary);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 32px rgba(13, 110, 253, 0.2);
+      }
+
+      .countdown-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 10px;
+        color: var(--bs-primary);
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      .countdown-label {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        opacity: 0.8;
+        color: #1b5e20;
+      }
+
+      .maintenance-message {
+        font-size: 1.1rem;
+        opacity: 0.85;
+        margin-bottom: 30px;
+        animation: fadeInUp 0.8s ease-out 0.8s both;
+        color: #0d6b68;
+      }
+
+      .contact-info {
+        background: rgba(255, 255, 255, 0.5);
+        border: 2px solid var(--bs-primary);
+        border-radius: 10px;
+        padding: 30px;
+        max-width: 400px;
+        margin: 0 auto;
+        backdrop-filter: blur(10px);
+        animation: fadeInUp 0.8s ease-out 1s both;
+      }
+
+      .contact-info h5 {
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+        color: var(--bs-primary);
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      .contact-info p {
+        margin-bottom: 10px;
+        opacity: 0.9;
+        color: #1b5e20;
+      }
+
+      .contact-info a {
+        color: var(--bs-primary);
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .contact-info a:hover {
+        color: #1b5e20;
+        text-decoration: underline;
+      }
+
+      /* Background Animation */
+      .maintenance-container::before {
+        content: "";
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: rgba(27, 94, 32, 0.08);
+        border-radius: 50%;
+        top: -150px;
+        right: -150px;
+        animation: float 6s ease-in-out infinite;
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(20px);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .maintenance-title {
+          font-size: 2rem;
+        }
+
+        .maintenance-subtitle {
+          font-size: 1rem;
+        }
+
+        .countdown-wrapper {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 15px;
+          max-width: 100%;
+        }
+
+        .countdown-number {
+          font-size: 2rem;
+        }
+
+        .contact-info {
+          margin: 0 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="maintenance-container">
+      <div class="maintenance-content">
+        <!-- Logo -->
+        <div class="maintenance-logo">
+          <img src="img/hanbau.png" alt="HANBAU Logo" />
+        </div>
+
+        <!-- Title -->
+        <h1 class="maintenance-title">Wartungsarbeiten</h1>
+
+        <!-- Subtitle -->
+        <p class="maintenance-subtitle">
+          Unser System ist vorübergehend geschlossen, damit wir Ihnen einen besseren Service bieten können.
+        </p>
+
+        <!-- Countdown Timer -->
+        <div class="countdown-wrapper">
+          <div class="countdown-item">
+            <span class="countdown-number" id="days">0</span>
+            <span class="countdown-label">Tag</span> 
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="hours">0</span>
+            <span class="countdown-label">Stunde</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="minutes">0</span>
+            <span class="countdown-label">Minute</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="seconds">0</span>
+            <span class="countdown-label">Sekunde</span>
+          </div>
+        </div>
+
+        <!-- Message -->
+        <p class="maintenance-message">
+          21. Juni werden wir wieder geöffnet sein!
+        </p>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h5>Kontaktieren Sie uns bei Fragen</h5>
+          <p>
+            <i class="fas fa-phone me-2"></i>
+            <a href="tel:+491728122543">+49 172 8122543</a>
+          </p>
+          <p>
+            <i class="fas fa-envelope me-2"></i>
+            <a href="mailto:info@hanbaudesign.com">info@hanbaudesign.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      function updateCountdown() {
+        const targetDate = new Date("2026-06-21T00:00:00").getTime();
+        const now = new Date().getTime();
+        const difference = targetDate - now;
+
+        if (difference > 0) {
+          const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+          const minutes = Math.floor((difference / 1000 / 60) % 60);
+          const seconds = Math.floor((difference / 1000) % 60);
+
+          document.getElementById("days").textContent = String(days).padStart(
+            2,
+            "0",
+          );
+          document.getElementById("hours").textContent = String(hours).padStart(
+            2,
+            "0",
+          );
+          document.getElementById("minutes").textContent = String(
+            minutes,
+          ).padStart(2, "0");
+          document.getElementById("seconds").textContent = String(
+            seconds,
+          ).padStart(2, "0");
+        }
+      }
+
+      // İlk yükleme
+      updateCountdown();
+
+      // Her saniye güncelle
+      setInterval(updateCountdown, 1000);
+    </script>
+  </body>
+</html>
